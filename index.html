@@ -2,15 +2,15 @@
 	<button class="accordion">Basic form with name and age info</button>
 <div class="panel">
   <br>
-  Full Name: <input name="fullName" type="text" /> <br><br>
+  Full Name: <input name="fullName" type="text" size="10" pattern="/^[A-Za-z]+$/" onBlur={this.validateName} /> <br><br>
   Age: <input name="age" type="number"> <br><br>
 </div>
 
 <button class="accordion">Form with email and pay info</button>
 <div class="panel">
    <br>
-   Email: <input name="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$"/><br><br>
-  Salary $: <input name="salary" type="number" /><br><br>
+   Email: <input name="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$" ={this.validateEmail} /><br><br>
+  Salary $: <input name="salary" type="number" /><br><br> 
 </div>
 
 <button class="accordion">Final Output</button>
